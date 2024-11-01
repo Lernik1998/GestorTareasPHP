@@ -32,10 +32,12 @@ $tarea = $arrayTareas[$indice];
 // Si del formulario recibo post y se presiona guardarCambios
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Almaceno los valores
-    $nombre = $_POST["tarea"];
-    $descripcion = $_POST["descripcion"];
-    $prioridad = $_POST["prioridad"];
-    $fechaLim = $_POST["fechaLim"];
+    // Almaceno los valores de manera segura
+    $nombre = isset($_POST["tarea"]) ? $_POST["tarea"] : '';
+    $descripcion = isset($_POST["descripcion"]) ? $_POST["descripcion"] : '';
+    $prioridad = isset($_POST["prioridad"]) ? $_POST["prioridad"] : '';
+    $fechaLim = isset($_POST["fechaLim"]) ? $_POST["fechaLim"] : '';
+
 
     if (isset($_POST["guardarCambios"])) {
         if (!empty($nombre) && !empty($descripcion)) {
