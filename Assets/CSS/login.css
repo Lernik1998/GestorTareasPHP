@@ -1,0 +1,22 @@
+/* login.css */
+
+/* Título */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Centrar el formulario */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9ecef;
+}
+
+/* Mensaje de error específico */
+.error-message {
+    text-align: center;
+    margin-top: 10px;
+}
