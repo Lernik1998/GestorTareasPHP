@@ -6,7 +6,9 @@ Estoy trabajando constantemente para mejorar el proyecto, y en el futuro, planeo
 
 ¡Espero que lo pruebes y me des tu opinión! Cualquier comentario o sugerencia será muy apreciado.
 
-Puedes probar mi proyecto a través del siguiente enlace: gestortareaslernik.fra1.zeabur.app
+Puedes probar mi proyecto a través del siguiente enlace: https://gestortareaslernik.fra1.zeabur.app/Controladores/login.php
+
+gestortareaslernik.fra1.zeabur.app
 
 ¡Gracias por tu apoyo! 🚀
 
