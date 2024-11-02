@@ -8,9 +8,6 @@ require "../Clases/ContrasenaInvalidaException.php";
 
 session_start();
 
-// Requiero la vista del login
-require "../Vistas/view.login.php";
-
 // Si hay un post con los datos
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Verificar si los datos están establecidos
@@ -64,3 +61,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
     }
 }
+
+// Requiero la vista del login
+require "../Vistas/view.login.php";
