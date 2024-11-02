@@ -9,6 +9,6 @@ error_reporting(E_ALL)
 */
 
 // Redirección al controlador login
-header("Location: login.php");
+header("Location: ./Controladores/login.php");
 exit();
 

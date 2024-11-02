@@ -1,51 +1,8 @@
-<?php
+<?php 
 
-// Incluyo los modelos
-require "Tarea.php";
-require "ManagerTareas.php";
-
-// Inicio la sesion
-session_start();
-
-// Si no hay una sesión activa
-if (!isset($_SESSION["usuario"])) {
-    header("Location: ./login.php");
-    exit();
-}
-
-// Deserializamos el objeto usuario
-$usuario = unserialize($_SESSION["usuario"]);
-
-// Manager
-$manager = new ManagerTareas();
-
-// Verificamos el POST
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
-    $tarea = $_POST["tarea"];
-    $descrip = $_POST["descripcion"];
-    $prioridad = $_POST["prioridad"];
-    $fechaLim = $_POST["fechaLim"];
-
-    if (!empty($tarea) && !empty($descrip)) {
-
-        if (isset($_POST["crearTarea"])) {
-            $tarea = new Tarea($tarea, $descrip, $prioridad, $fechaLim);
-            $manager->crearTarea($tarea);
-        }
-
-    } else {
-        $_SESSION["error"] = "Faltan datos para crear una tarea";
-        header("Location: gestorTareas.php");
-        exit();
-    }
-}
 // Obtengo las tareas y las guardo en el array tareas
 $arrayTareas = $manager->obtenerTareas();
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -54,8 +11,8 @@ $arrayTareas = $manager->obtenerTareas();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestor de tareas</title>
-    <link rel="stylesheet" href="./Assets/CSS/general.css">
-    <link rel="stylesheet" href="./Assets/CSS/gestorTareas.css">
+    <link rel="stylesheet" href="../Assets/CSS/general.css">
+    <link rel="stylesheet" href="../Assets/CSS/gestorTareas.css">
 
 </head>
 
@@ -115,7 +72,7 @@ $arrayTareas = $manager->obtenerTareas();
                         <p>Fecha Límite: <?php echo htmlspecialchars($tarea->getFechaLim()); ?></p>
 
                         <!-- Formulario de edición -->
-                        <form action="editarTarea.php" method="post">
+                        <form action="../Controladores/editarTarea.php" method="post">
                             <!-- Paso el indice de la tarea de manera oculta -->
                             <input type="hidden" name="indice" value="<?php echo $index; ?>">
                             <button type="submit">Editar</button>
