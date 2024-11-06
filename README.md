@@ -6,9 +6,9 @@ Estoy trabajando constantemente para mejorar el proyecto, y en el futuro, planeo
 
 ¡Espero que lo pruebes y me des tu opinión! Cualquier comentario o sugerencia será muy apreciado.
 
-Puedes probar mi proyecto a través del siguiente enlace: https://gestiontareasphp.fra1.zeabur.app/Controladores/login.php
+Puedes probar mi proyecto a través del siguiente enlace: https://gestorphpsesiones.fra1.zeabur.app/Controladores/login.php
 
-gestiontareasphp.fra1.zeabur.app
+gestorphpsesiones.fra1.zeabur.app
 
 ¡Gracias por tu apoyo! 🚀
 
